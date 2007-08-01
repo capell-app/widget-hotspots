@@ -35,21 +35,45 @@ Screenshot contract: `docs/screenshots.json`.
 
 ![Hotspots Widget extension card](docs/screenshots/extension-card.svg)
 
-![Hotspots fields in Layout Builder](docs/screenshots/hotspots-layout-builder-editor.png)
+![Illustrative hotspots public output preview](docs/screenshots/hotspots-public-output.png)
 
-- Hotspots Widget extension card (marketplace, required).
-- Hotspots fields in Layout Builder (admin, optional).
-- Hotspots public output (frontend, optional).
+- Hotspots Widget extension card (marketplace, required evidence).
+- Hotspots fields in Layout Builder (admin, supplementary evidence).
+- Illustrative hotspots public output preview (frontend, required evidence).
+- Hotspots fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
 
 ## Technical Shape
 
-- Service providers: `Capell\WidgetHotspots\Providers\WidgetHotspotsServiceProvider`.
-- Filament classes: `HotspotsWidget`.
-- Data objects: `HotspotData`, `HotspotsInputData`, `HotspotsRenderData`.
-- Manifest contributions: `content-widget: Capell\WidgetHotspots\WidgetHotspotsContribution`.
-- Health checks: `Capell\WidgetHotspots\Health\WidgetHotspotsHealthCheck`.
-- Blade views: `packages/widget-hotspots/resources/views/widget.blade.php`.
-- Cache tags: `widget-hotspots`.
+### Service providers
+
+- `Capell\WidgetHotspots\Providers\WidgetHotspotsServiceProvider`
+
+### Filament classes
+
+- `HotspotsWidget`
+
+### Data objects
+
+- `HotspotData`
+- `HotspotsInputData`
+- `HotspotsRenderData`
+
+### Manifest contributions
+
+- `content-widget: Capell\WidgetHotspots\WidgetHotspotsContribution`
+
+### Health checks
+
+- `Capell\WidgetHotspots\Health\WidgetHotspotsHealthCheck`
+
+### Blade views
+
+- `packages/widget-hotspots/resources/views/widget.blade.php`
+
+### Cache tags
+
+- `widget-hotspots`
+
 
 ## Data Model
 
@@ -60,7 +84,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 - Required packages: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
 - Admin navigation: no admin page or resource contribution is declared.
 - Admin/editor extensions: `content-widget: WidgetHotspotsContribution`.
-- Permissions: none declared in `capell.json`.
+- Permissions: no package permission declarations or Shield gates detected; host access rules still apply.
 - Public routes: none declared.
 - Database changes: no package migrations declared.
 - Config: no package config files.
@@ -85,8 +109,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-hotspots`.
-2. No package-specific setup command or migrations are declared.
-3. Open the package detail or install-intent surface and confirm the Hotspots Widget extension card is present.
+2. Open `/screenshot-fixtures/catalogue/widget-hotspots/hotspots-public-output` and confirm the public output renders without admin state.
 
 ## Next Steps
 
