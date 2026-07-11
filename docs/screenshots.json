@@ -1,0 +1,52 @@
+{
+    "package": "widget-hotspots",
+    "composerName": "capell-app/widget-hotspots",
+    "generatedFor": "deployment-screenshot-runner",
+    "requiresInstalledPackage": true,
+    "composerRequires": [
+        "capell-app/widget-hotspots",
+        "capell-app/layout-builder"
+    ],
+    "outputDirectory": "packages/widget-hotspots/docs/screenshots",
+    "auditStatus": "fixture-needed",
+    "auditReason": "The package is release-ready with honest interim Marketplace artwork; deterministic Layout Builder and public-page fixtures still need capture.",
+    "entries": [
+        {
+            "id": "widget-hotspots-extension-card",
+            "title": "Hotspots Widget extension card.",
+            "package": "widget-hotspots",
+            "surface": "marketplace",
+            "targetType": "marketplace-asset",
+            "target": "extension-card",
+            "required": true,
+            "path": "docs/assets/marketplace/extension-card.svg",
+            "screenshotPath": "packages/widget-hotspots/docs/screenshots/extension-card.svg",
+            "notes": "Committed Beta Marketplace card artwork for Hotspots Widget.",
+            "useCase": "A buyer reviews the Beta extension card before enabling Hotspots Widget."
+        },
+        {
+            "id": "hotspots-layout-builder-editor",
+            "title": "Hotspots fields in Layout Builder.",
+            "package": "widget-hotspots",
+            "surface": "admin",
+            "targetType": "admin-surface",
+            "target": "Layout Builder page editor",
+            "required": false,
+            "notes": "Capture the ordered hotspot editor and a public image with one focused hotspot and its detail visible. Capture the editor state before the page is published.",
+            "useCase": "An editor can see the fields used to configure the Hotspots widget.",
+            "screenshotPath": "packages/widget-hotspots/docs/screenshots/hotspots-layout-builder-editor.png"
+        },
+        {
+            "id": "hotspots-public-output",
+            "title": "Hotspots public output.",
+            "package": "widget-hotspots",
+            "surface": "frontend",
+            "targetType": "artifact",
+            "target": "Seeded public page fixture",
+            "required": false,
+            "notes": "Capture the ordered hotspot editor and a public image with one focused hotspot and its detail visible. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
+            "useCase": "A keyboard or pointer user explores labelled details on an image without internal identifiers leaking.",
+            "screenshotPath": "packages/widget-hotspots/docs/screenshots/hotspots-public-output.png"
+        }
+    ]
+}
