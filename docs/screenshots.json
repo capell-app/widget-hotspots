@@ -12,6 +12,19 @@
     "auditReason": "The package is release-ready with honest interim Marketplace artwork; deterministic Layout Builder and public-page fixtures still need capture.",
     "entries": [
         {
+            "id": "widget-hotspots-extension-card",
+            "title": "Hotspots Widget extension card.",
+            "package": "widget-hotspots",
+            "surface": "marketplace",
+            "targetType": "marketplace-asset",
+            "target": "extension-card",
+            "required": true,
+            "path": "docs/assets/marketplace/extension-card.svg",
+            "screenshotPath": "packages/widget-hotspots/docs/screenshots/extension-card.svg",
+            "notes": "Committed Beta Marketplace card artwork for Hotspots Widget.",
+            "useCase": "A buyer reviews the Beta extension card before enabling Hotspots Widget."
+        },
+        {
             "id": "hotspots-layout-builder-editor",
             "title": "Hotspots fields in Layout Builder.",
             "package": "widget-hotspots",
