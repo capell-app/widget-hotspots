@@ -11,7 +11,7 @@ final class WidgetHotspotsHealthCheck extends AbstractWidgetExtensionHealthCheck
 {
     public static function compatibleCapellApiVersion(): string
     {
-        return '^4.1';
+        return '^0.0';
     }
 
     protected static function definitionKey(): string

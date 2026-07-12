@@ -4,8 +4,8 @@
     "slug": "widget-hotspots",
     "displayName": "Hotspots Widget",
     "kind": "package",
-    "capellApiVersion": "^4.0",
-    "version": "1.x-dev",
+    "capellApiVersion": "^0.0",
+    "version": "0.0.x-dev",
     "description": "Up to 30 ordered accessible image hotspots with numeric placement and optional secure lazy targets.",
     "product": {
         "group": "Capell Foundation",
