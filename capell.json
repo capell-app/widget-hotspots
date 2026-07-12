@@ -36,7 +36,8 @@
     "contributes": [
         {
             "type": "content-widget",
-            "class": "Capell\\WidgetHotspots\\WidgetHotspotsContribution"
+            "class": "Capell\\WidgetHotspots\\WidgetHotspotsContribution",
+            "key": "capell-app.widget-hotspots"
         }
     ],
     "database": {
