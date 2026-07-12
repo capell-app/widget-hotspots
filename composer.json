@@ -1,0 +1,33 @@
+{
+    "name": "capell-app/widget-hotspots",
+    "description": "Accessible image hotspot widget for Capell.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.4",
+        "capell-app/admin": "^0.0.4 || 0.0.x-dev",
+        "capell-app/core": "^0.0.4 || 0.0.x-dev",
+        "capell-app/frontend": "^0.0.4 || 0.0.x-dev",
+        "capell-app/layout-builder": "^0.0.4 || 0.0.x-dev",
+        "spatie/laravel-package-tools": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Capell\\WidgetHotspots\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Capell\\WidgetHotspots\\Providers\\WidgetHotspotsServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-main": "0.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true
+}
