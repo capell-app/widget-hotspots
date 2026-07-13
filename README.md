@@ -27,13 +27,9 @@ Status details:
 
 ## Screens And Workflow
 
-Screenshot contract: `docs/screenshots.json`.
+Marketplace media is declared in `capell.json`:
 
-![Hotspots Widget extension card](docs/screenshots/extension-card.svg)
-
-- Hotspots Widget extension card (marketplace, required).
-- Hotspots fields in Layout Builder (admin, optional).
-- Hotspots public output (frontend, optional).
+- Hotspots widget.
 
 ## Technical Shape
 
@@ -84,8 +80,6 @@ Docs gap: document extension points here if the package delegates persistence to
 
 - [Package docs](docs/README.md)
 - [Overview](docs/overview.md)
-- [Screenshot contract](docs/screenshots.json)
-- [Marketplace assets](docs/assets/marketplace/)
 - [Capell content language plan](../../docs/CONTENT_LANGUAGE_PLAN.md)
 - [Capell documentation design system](../../docs/DESIGN_SYSTEM.md)
 - [Capell and package ERD notes](../../docs/erd/capell-and-package-erds.md)
