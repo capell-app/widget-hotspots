@@ -1,1 +1,16 @@
-document.addEventListener('keydown',(event)=>{const summaries=Array.from(document.querySelectorAll('.capell-hotspots summary'));const index=summaries.indexOf(document.activeElement);if(index<0||!['ArrowRight','ArrowDown','ArrowLeft','ArrowUp'].includes(event.key))return;event.preventDefault();const direction=['ArrowRight','ArrowDown'].includes(event.key)?1:-1;summaries[(index+direction+summaries.length)%summaries.length]?.focus()});
+document.addEventListener('keydown', (event) => {
+    const summaries = Array.from(
+        document.querySelectorAll('.capell-hotspots summary'),
+    )
+    const index = summaries.indexOf(document.activeElement)
+    if (
+        index < 0 ||
+        !['ArrowRight', 'ArrowDown', 'ArrowLeft', 'ArrowUp'].includes(event.key)
+    )
+        return
+    event.preventDefault()
+    const direction = ['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1
+    summaries[
+        (index + direction + summaries.length) % summaries.length
+    ]?.focus()
+})
