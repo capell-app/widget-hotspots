@@ -6,9 +6,11 @@
 
 Hotspots Widget is an **Available**, **No schema impact** Capell package in the **Capell Foundation** product group. It ships as `capell-app/widget-hotspots` and extends these surfaces: admin, frontend.
 
-Up to 30 ordered accessible image hotspots with numeric placement and optional secure lazy targets.
+Hotspots adds a Layout Builder widget for placing bounded, accessible points over a local image. Each point can expose supporting content or an approved lazy widget target.
 
-After install, admins get package-owned management surfaces and public users may see package-owned frontend output or routes.
+Editors position and label hotspots in Layout Builder, and visitors can inspect those points from the public image using the provided interaction controls.
+
+Evidence: [`src/Filament/HotspotsWidget.php`](src/Filament/HotspotsWidget.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php), [`tests/Feature/WidgetHotspotsTest.php`](tests/Feature/WidgetHotspotsTest.php), [`capell.json`](capell.json).
 
 Status details:
 
@@ -21,9 +23,11 @@ Status details:
 
 ## Why It Matters
 
-**For developers:** The package gives developers package-owned service providers, Data objects, Filament classes, and Blade views instead of pushing this behaviour into core or application code.
+**For developers:** The typed extension validates coordinate bounds, point limits, local media, and registry-backed targets before public rendering.
 
-**For teams:** Place accessible details and secure lazy targets over a local image.
+**For teams:** Teams can annotate products, diagrams, or places directly on an image without building a custom interactive map.
+
+Evidence: [`src/Providers/WidgetHotspotsServiceProvider.php`](src/Providers/WidgetHotspotsServiceProvider.php), [`src/Filament/HotspotsWidget.php`](src/Filament/HotspotsWidget.php), [`tests/Feature/WidgetHotspotsTest.php`](tests/Feature/WidgetHotspotsTest.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php).
 
 ## Screens And Workflow
 
@@ -47,25 +51,27 @@ Screenshot contract: `docs/screenshots.json`.
 
 ## Data Model
 
-This package has no schema impact. It does not declare package-owned migrations or required tables.
-
-Docs gap: document extension points here if the package delegates persistence to a host package.
+This package has no schema impact. It extends Capell through `content-widget` contributions instead of declaring package-owned tables.
 
 ## Install Impact
 
-- Admin navigation: adds package-owned Filament classes when registered.
+- Required packages: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
+- Admin navigation: no admin page or resource contribution is declared.
+- Admin/editor extensions: `content-widget: WidgetHotspotsContribution`.
 - Permissions: none declared in `capell.json`.
-- Public routes: none detected in package route files.
+- Public routes: none declared.
 - Database changes: no package migrations declared.
+- Config: no package config files.
 - Settings: no package settings declared.
-- Queues or schedules: none detected in standard package paths.
+- Queues or schedules: none declared.
 - Cache tags: `widget-hotspots`.
 - Commands: none declared.
 
 ## Common Pitfalls
 
+- Keep required Capell packages on compatible v4 releases: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
 - Keep public Blade and cached HTML free of authoring markers, model IDs, permissions, signed editor URLs, and lazy database queries.
-- Keep `composer.json`, `composer.local.json`, `capell.json`, docs, screenshots, and tests aligned when the package surface changes.
+- Custom write integrations must preserve invalidation for `widget-hotspots` cache tags.
 
 ## Troubleshooting
 
@@ -77,13 +83,14 @@ Docs gap: document extension points here if the package delegates persistence to
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-hotspots`.
-2. Run the required setup: no package migrations are declared; clear cached config and routes if the host app uses caches.
-3. Open the related Capell admin surface and verify Hotspots Widget appears.
+2. No package-specific setup command or migrations are declared.
+3. Open the package detail or install-intent surface and confirm the Hotspots Widget extension card is present.
 
 ## Next Steps
 
 - [Package docs](docs/README.md)
 - [Overview](docs/overview.md)
+- [Troubleshooting](#troubleshooting)
 - [Screenshot contract](docs/screenshots.json)
 - [Marketplace assets](docs/assets/marketplace/)
 - [Capell content language plan](../../docs/CONTENT_LANGUAGE_PLAN.md)

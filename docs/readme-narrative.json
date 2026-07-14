@@ -1,0 +1,35 @@
+{
+    "whatThisPluginAdds": {
+        "text": "Hotspots adds a Layout Builder widget for placing bounded, accessible points over a local image. Each point can expose supporting content or an approved lazy widget target.",
+        "evidence": [
+            "src/Filament/HotspotsWidget.php",
+            "resources/views/widget.blade.php",
+            "tests/Feature/WidgetHotspotsTest.php"
+        ]
+    },
+    "surfaceOutcome": {
+        "text": "Editors position and label hotspots in Layout Builder, and visitors can inspect those points from the public image using the provided interaction controls.",
+        "evidence": [
+            "capell.json",
+            "src/Filament/HotspotsWidget.php",
+            "resources/views/widget.blade.php"
+        ]
+    },
+    "whyItMatters": {
+        "developers": {
+            "text": "The typed extension validates coordinate bounds, point limits, local media, and registry-backed targets before public rendering.",
+            "evidence": [
+                "src/Providers/WidgetHotspotsServiceProvider.php",
+                "src/Filament/HotspotsWidget.php",
+                "tests/Feature/WidgetHotspotsTest.php"
+            ]
+        },
+        "teams": {
+            "text": "Teams can annotate products, diagrams, or places directly on an image without building a custom interactive map.",
+            "evidence": [
+                "resources/views/widget.blade.php",
+                "tests/Feature/WidgetHotspotsTest.php"
+            ]
+        }
+    }
+}
