@@ -34,6 +34,11 @@
             "required": false,
             "notes": "Capture the ordered hotspot editor and a public image with one focused hotspot and its detail visible. Capture the editor state before the page is published.",
             "useCase": "An editor can see the fields used to configure the Hotspots widget.",
+            "url": "/screenshot-fixtures/widgets/hotspots/editor",
+            "waitFor": "[data-widget-screenshot-fixture=\"editor\"]",
+            "colorSchemes": [
+                "light"
+            ],
             "screenshotPath": "packages/widget-hotspots/docs/screenshots/hotspots-layout-builder-editor.png"
         },
         {
@@ -46,6 +51,11 @@
             "required": false,
             "notes": "Capture the ordered hotspot editor and a public image with one focused hotspot and its detail visible. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
             "useCase": "A keyboard or pointer user explores labelled details on an image without internal identifiers leaking.",
+            "url": "/screenshot-fixtures/widgets/hotspots/public",
+            "waitFor": "[data-widget-screenshot-fixture=\"public\"]",
+            "colorSchemes": [
+                "light"
+            ],
             "screenshotPath": "packages/widget-hotspots/docs/screenshots/hotspots-public-output.png"
         }
     ]

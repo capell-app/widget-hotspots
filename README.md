@@ -35,6 +35,8 @@ Screenshot contract: `docs/screenshots.json`.
 
 ![Hotspots Widget extension card](docs/screenshots/extension-card.svg)
 
+![Hotspots fields in Layout Builder](docs/screenshots/hotspots-layout-builder-editor.png)
+
 - Hotspots Widget extension card (marketplace, required).
 - Hotspots fields in Layout Builder (admin, optional).
 - Hotspots public output (frontend, optional).
