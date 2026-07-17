@@ -36,9 +36,7 @@
             "useCase": "An editor can see the fields used to configure the Hotspots widget.",
             "url": "/screenshot-fixtures/widgets/hotspots/editor",
             "waitFor": "[data-widget-screenshot-fixture=\"editor\"]",
-            "colorSchemes": [
-                "light"
-            ],
+            "colorSchemes": ["light"],
             "screenshotPath": "packages/widget-hotspots/docs/screenshots/hotspots-layout-builder-editor.png"
         },
         {
@@ -53,9 +51,7 @@
             "useCase": "A keyboard or pointer user explores labelled details on an image without internal identifiers leaking.",
             "url": "/screenshot-fixtures/widgets/hotspots/public",
             "waitFor": "[data-widget-screenshot-fixture=\"public\"]",
-            "colorSchemes": [
-                "light"
-            ],
+            "colorSchemes": ["light"],
             "screenshotPath": "packages/widget-hotspots/docs/screenshots/hotspots-public-output.png"
         }
     ]
