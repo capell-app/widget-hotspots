@@ -1,4 +1,4 @@
-@php /** @var \Capell\WidgetHotspots\Data\HotspotsRenderData $renderData */ $pageData=$publicPageRenderData??null; @endphp
+@php /** @var \Capell\WidgetHotspots\Data\HotspotsRenderData $renderData */ $pageData = $publicPageRenderData ?? null; @endphp
 <figure class="capell-hotspots">
     <img
         src="{{ asset('storage/' . ltrim($renderData->image, '/')) }}"
@@ -6,7 +6,7 @@
     />
     <div class="capell-hotspots__points">
         @foreach ($renderData->hotspots as $hotspot)
-            @php $locator=$pageData?->widgetInteractionLocator($hotspot->targetInstanceId??''); @endphp
+            @php $locator = $pageData?->widgetInteractionLocator($hotspot->targetInstanceId ?? ''); @endphp
             <details
                 style="--hotspot-x:{{ $hotspot->x }}%;--hotspot-y:{{ $hotspot->y }}%"
             >
