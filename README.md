@@ -10,8 +10,6 @@ Hotspots adds a Layout Builder widget for placing bounded, accessible points ove
 
 Editors position and label hotspots in Layout Builder, and visitors can inspect those points from the public image using the provided interaction controls.
 
-Evidence: [`src/Filament/HotspotsWidget.php`](src/Filament/HotspotsWidget.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php), [`tests/Feature/WidgetHotspotsTest.php`](tests/Feature/WidgetHotspotsTest.php), [`capell.json`](capell.json).
-
 Status details:
 
 - Status: Available
@@ -27,19 +25,17 @@ Status details:
 
 **For teams:** Teams can annotate products, diagrams, or places directly on an image without building a custom interactive map.
 
-Evidence: [`src/Providers/WidgetHotspotsServiceProvider.php`](src/Providers/WidgetHotspotsServiceProvider.php), [`src/Filament/HotspotsWidget.php`](src/Filament/HotspotsWidget.php), [`tests/Feature/WidgetHotspotsTest.php`](tests/Feature/WidgetHotspotsTest.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php).
-
 ## Screens And Workflow
 
 Screenshot contract: `docs/screenshots.json`.
 
 ![Hotspots Widget extension card](docs/screenshots/extension-card.svg)
 
-![Illustrative hotspots public output preview](docs/screenshots/hotspots-public-output.png)
+![Hotspots public output](docs/screenshots/hotspots-public-output.png)
 
 - Hotspots Widget extension card (marketplace, required evidence).
 - Hotspots fields in Layout Builder (admin, supplementary evidence).
-- Illustrative hotspots public output preview (frontend, required evidence).
+- Hotspots public output (frontend, required evidence).
 - Hotspots fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
 
 ## Technical Shape
@@ -109,7 +105,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-hotspots`.
-2. Open `/screenshot-fixtures/catalogue/widget-hotspots/hotspots-public-output` and confirm the public output renders without admin state.
+2. Open the package detail or install-intent surface and confirm the Hotspots Widget extension card is present.
 
 ## Next Steps
 
@@ -122,6 +118,5 @@ This package has no schema impact. It extends Capell through `content-widget` co
 - [Capell documentation design system](../../docs/DESIGN_SYSTEM.md)
 - [Capell and package ERD notes](../../docs/erd/capell-and-package-erds.md)
 - Related packages: [Layout Builder](../layout-builder/README.md).
-- Focused tests: `vendor/bin/pest packages/widget-hotspots/tests --configuration=phpunit.xml`.
 
 <!-- prettier-ignore-end -->
