@@ -15,6 +15,7 @@ use Capell\LayoutBuilder\Providers\AbstractFoundationWidgetServiceProvider;
 use Capell\WidgetHotspots\Data\HotspotsInputData;
 use Capell\WidgetHotspots\Data\HotspotsRenderData;
 use Capell\WidgetHotspots\Filament\HotspotsWidget;
+use Override;
 
 final class WidgetHotspotsServiceProvider extends AbstractFoundationWidgetServiceProvider
 {
@@ -22,11 +23,22 @@ final class WidgetHotspotsServiceProvider extends AbstractFoundationWidgetServic
 
     public static string $packageName = 'capell-app/widget-hotspots';
 
+    #[Override]
+    public function packageBooted(): void {}
+
+    #[Override]
     protected static function resourceGroup(): string
     {
         return 'capell-app.widget-hotspots';
     }
 
+    #[Override]
+    protected function bootInstalledRuntime(): void
+    {
+        $this->registerWidget();
+    }
+
+    #[Override]
     protected function definition(): WidgetExtensionDefinitionData
     {
         return new WidgetExtensionDefinitionData(key: 'capell-app.hotspots', packageName: self::$packageName, stateVersion: 1, filamentWidget: HotspotsWidget::class, inputData: HotspotsInputData::class, renderData: HotspotsRenderData::class, fallbackView: 'capell-widget-hotspots::widget', components: ['blade' => 'capell::widgets.capell-app.hotspots'], resourceGroups: [self::resourceGroup()], defaultResourceLoadingStrategy: PresentationLoadingStrategy::Visible, capabilities: new WidgetExtensionCapabilitiesData(supportsInteractions: true, requiresInstanceIdentity: true, presentationCapabilities: [WidgetPresentationCapability::Width, WidgetPresentationCapability::Alignment, WidgetPresentationCapability::LoadingStrategy], supportedInteractionEvents: [InteractionTriggerEvent::Click], supportedInteractionBehaviors: [InteractionBehavior::Modal, InteractionBehavior::SlideOver, InteractionBehavior::InlineReveal, InteractionBehavior::ReplaceRegion], supportedInteractionTargetTypes: [InteractionTargetType::Widget]));

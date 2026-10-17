@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+
+use Capell\Core\Facades\CapellCore;
 use Capell\LayoutBuilder\Support\WidgetExtensions\WidgetExtensionRegistry;
 use Capell\WidgetHotspots\Data\HotspotsInputData;
 use Capell\WidgetHotspots\Health\WidgetHotspotsHealthCheck;
@@ -8,6 +10,7 @@ use Capell\WidgetHotspots\Providers\WidgetHotspotsServiceProvider;
 use Illuminate\Validation\ValidationException;
 
 beforeEach(function (): void {
+    CapellCore::forcePackageInstalled('capell-app/widget-hotspots');
     $this->app->register(WidgetHotspotsServiceProvider::class);
 });
 it('registers its interactive definition and health surfaces', function (): void {

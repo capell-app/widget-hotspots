@@ -29,11 +29,11 @@ Status details:
 
 Screenshot contract: `docs/screenshots.json`.
 
-![Hotspots Widget extension card](docs/screenshots/extension-card.svg)
-
 ![Hotspots public output](docs/screenshots/hotspots-public-output.png)
 
-- Hotspots Widget extension card (marketplace, required evidence).
+![Hotspots fields in Layout Builder](docs/screenshots/hotspots-layout-builder-editor.png)
+
+- Hotspots Widget extension card (marketplace, supplementary documentation fixture).
 - Hotspots fields in Layout Builder (admin, supplementary evidence).
 - Hotspots public output (frontend, required evidence).
 - Hotspots fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
@@ -56,6 +56,7 @@ Screenshot contract: `docs/screenshots.json`.
 
 ### Manifest contributions
 
+- `asset: Capell\WidgetHotspots\WidgetHotspotsContribution`
 - `content-widget: Capell\WidgetHotspots\WidgetHotspotsContribution`
 
 ### Health checks
@@ -73,7 +74,7 @@ Screenshot contract: `docs/screenshots.json`.
 
 ## Data Model
 
-This package has no schema impact. It extends Capell through `content-widget` contributions instead of declaring package-owned tables.
+This package has no schema impact. It extends Capell through `asset` contributions and `content-widget` contributions instead of declaring package-owned tables.
 
 ## Install Impact
 
@@ -105,7 +106,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-hotspots`.
-2. Open the package detail or install-intent surface and confirm the Hotspots Widget extension card is present.
+2. Open a host admin workflow that uses the package extension and verify Hotspots Widget is available.
 
 ## Next Steps
 

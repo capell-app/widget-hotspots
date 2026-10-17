@@ -38,6 +38,11 @@
             "type": "content-widget",
             "key": "capell-app.hotspots",
             "class": "Capell\\WidgetHotspots\\WidgetHotspotsContribution"
+        },
+        {
+            "type": "asset",
+            "key": "resource-group:capell-app.widget-hotspots",
+            "class": "Capell\\WidgetHotspots\\WidgetHotspotsContribution"
         }
     ],
     "database": {
