@@ -31,5 +31,24 @@
                 "tests/Feature/WidgetHotspotsTest.php"
             ]
         }
-    }
+    },
+    "troubleshooting": [
+        {
+            "symptom": "The image is refused",
+            "cause": "The path is a web address, contains unsupported characters, or the alt text is empty",
+            "check": "Check the image and alt text fields",
+            "fix": "Pick the image from the media library and describe it in the alt text",
+            "evidence": ["src/Data/HotspotsInputData.php"]
+        },
+        {
+            "symptom": "A hotspot is refused",
+            "cause": "It sits outside the image (x or y outside 0 to 100), has no label or detail, or more than 30 hotspots exist",
+            "check": "Check each hotspot's position, label and detail",
+            "fix": "Place hotspots within 0 to 100 on both axes and keep between 1 and 30",
+            "evidence": [
+                "src/Data/HotspotData.php",
+                "src/Data/HotspotsInputData.php"
+            ]
+        }
+    ]
 }

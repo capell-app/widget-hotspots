@@ -46,7 +46,12 @@ Screenshot contract: `docs/screenshots.json`.
 
 ### Filament classes
 
+- `HotspotPositionPicker`
 - `HotspotsWidget`
+
+### Actions
+
+- `BuildRevealTargetOptionsAction`
 
 ### Data objects
 
@@ -65,6 +70,7 @@ Screenshot contract: `docs/screenshots.json`.
 
 ### Blade views
 
+- `packages/widget-hotspots/resources/views/forms/position-picker.blade.php`
 - `packages/widget-hotspots/resources/views/widget.blade.php`
 
 ### Cache tags
@@ -102,11 +108,17 @@ This package has no schema impact. It extends Capell through `asset` contributio
 | --- | --- | --- | --- |
 | Package surface is missing after install | Provider or manifest is not loaded | Confirm `capell.json`, package `composer.json`, and provider registration | Reinstall the package, refresh Composer autoload, and clear host caches |
 | Public output leaks unexpected state | Render data, cache variation, or authoring boundary has regressed | Check public Blade, cache tags, and public-output safety tests | Move data loading out of Blade and rerun the package public-output tests |
+| The image is refused | The path is a web address, contains unsupported characters, or the alt text is empty | Check the image and alt text fields | Pick the image from the media library and describe it in the alt text |
+| A hotspot is refused | It sits outside the image (x or y outside 0 to 100), has no label or detail, or more than 30 hotspots exist | Check each hotspot's position, label and detail | Place hotspots within 0 to 100 on both axes and keep between 1 and 30 |
 
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-hotspots`.
-2. Open a host admin workflow that uses the package extension and verify Hotspots Widget is available.
+2. Open a page, click **Layout builder**, **Add widgets**, then choose **Image hotspots**.
+
+## Upgrading
+
+No manual steps between minor versions.
 
 ## Next Steps
 
