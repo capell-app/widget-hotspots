@@ -16,7 +16,7 @@ Editors configure it as a Layout Builder widget with an image position picker, n
 
 ## Good to know
 
-- This free beta extension belongs to Capell Foundation and requires Layout Builder.
+- This free beta extension belongs to Capell Essentials and requires Layout Builder.
 - Hotspots use local images; remote image URLs are rejected.
 - The point controls are at least 44 pixels and keyboard reachable.
 - Target UUIDs are authoring data. Public output resolves a target to its interaction locator and never exposes the raw target UUID in the link.

@@ -8,7 +8,7 @@
     "version": "1.0.0",
     "description": "Up to 30 ordered accessible image hotspots with numeric placement and optional secure lazy targets.",
     "product": {
-        "group": "Capell Foundation",
+        "group": "Capell Essentials",
         "tier": "free",
         "bundle": "foundation"
     },
@@ -143,7 +143,34 @@
     },
     "marketplace": {
         "summary": "Place accessible details and secure lazy targets over a local image.",
+        "description": "Mark up to thirty points on a product photo, venue plan or diagram. Each point opens its own accessible details panel and can link to another widget on the same page. Requires Layout Builder. Limits: the image must be uploaded to the Capell media library, and a link only works when its target widget is on the same rendered page.",
+        "problem": "Visitors looking at a detailed image may not know where to find an explanation.",
+        "outcome": "A page has labelled points that visitors can inspect on an image.",
+        "faq": [
+            {
+                "question": "What can a hotspot reveal?",
+                "answer": "A point can expose supporting content or an approved lazy widget target."
+            },
+            {
+                "question": "How many points can an image have?",
+                "answer": "An image can have up to 30 hotspots."
+            },
+            {
+                "question": "Are external images supported for hotspots?",
+                "answer": "No. Editors select a local image and provide alt text."
+            }
+        ],
         "screenshots": [
+            {
+                "path": "docs/assets/marketplace/listing-hotspots-public-output.png",
+                "alt": "Hotspots public output",
+                "caption": "Hotspots public output"
+            },
+            {
+                "path": "docs/assets/marketplace/listing-hotspots-layout-builder-editor.png",
+                "alt": "Hotspots fields in Layout Builder",
+                "caption": "Hotspots fields in Layout Builder"
+            },
             {
                 "path": "docs/assets/marketplace/extension-card.jpg",
                 "alt": "Hotspots widget preview",
