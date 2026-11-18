@@ -6,7 +6,7 @@ Developer reference for `capell-app/widget-hotspots`. Start with the [README](..
 
 ## Package Details
 
-Hotspots Widget is an **Available**, **No schema impact** Capell package in the **Capell Essentials** product group. It ships as `capell-app/widget-hotspots` and extends these surfaces: admin, frontend.
+Hotspots Widget is an **Available** Capell package in the **Capell Essentials** product group. It ships as `capell-app/widget-hotspots` and extends these surfaces: admin, frontend.
 
 - Status: Available
 - Tier: free

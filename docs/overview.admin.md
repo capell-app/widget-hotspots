@@ -12,7 +12,7 @@ Editors configure it as a Layout Builder widget with an image position picker, n
 
 ## Good to know
 
-- This free beta extension belongs to Capell Essentials and requires Layout Builder.
+- This free extension belongs to Capell Essentials and requires Layout Builder.
 - Hotspots use local images; remote image URLs are rejected.
 - The point controls are at least 44 pixels and keyboard reachable.
 - Target UUIDs are authoring data. Public output resolves a target to its interaction locator and never exposes the raw target UUID in the link.
@@ -20,6 +20,6 @@ Editors configure it as a Layout Builder widget with an image position picker, n
 
 ## Screenshot status
 
-Capture the ordered hotspot editor and a public image with one focused hotspot and its detail visible. The committed Marketplace card is interim beta artwork until these two fixture captures are recorded.
+Capture the ordered hotspot editor and a public image with one focused hotspot and its detail visible.
 
 **Content to open** lists registered widgets from the current page content field and language, excluding the widget being edited. It keeps stable identities internally, so reordering does not change the target. Targets in other pages, languages, or separate content fields are not offered. If a saved target is removed or unavailable, the authoring form asks you to select a replacement before publishing. The public page keeps the existing safe fallback without exposing the missing identity.

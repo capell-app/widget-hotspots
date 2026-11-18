@@ -1,0 +1,39 @@
+[
+    {
+        "claim": "Up to thirty points per image, each with a label and plain-text detail",
+        "evidence": [
+            "src/Filament/HotspotsWidget.php",
+            "src/Data/HotspotsInputData.php",
+            "src/Data/HotspotData.php"
+        ]
+    },
+    {
+        "claim": "Points placed by dragging on a preview or with arrow keys",
+        "evidence": [
+            "src/Filament/HotspotsWidget.php",
+            "resources/lang/en/widget.php"
+        ]
+    },
+    {
+        "claim": "Image must be uploaded to the site",
+        "evidence": [
+            "src/Data/HotspotsInputData.php",
+            "resources/views/widget.blade.php"
+        ]
+    },
+    {
+        "claim": "Open details link to something else on the same page only",
+        "evidence": [
+            "resources/views/widget.blade.php",
+            "src/Actions/BuildRevealTargetOptionsAction.php"
+        ]
+    },
+    {
+        "claim": "Arrow keys move between markers for keyboard visitors",
+        "evidence": ["resources/dist/widget.js"]
+    },
+    {
+        "claim": "Markers use the theme's primary colour and are thumb-sized",
+        "evidence": ["resources/dist/widget.css"]
+    }
+]

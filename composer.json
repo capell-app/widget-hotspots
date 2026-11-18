@@ -1,6 +1,6 @@
 {
     "name": "capell-app/widget-hotspots",
-    "description": "Accessible image hotspot widget for Capell.",
+    "description": "Image hotspot widget for Capell pages with up to thirty numbered dots visitors tap to read about each part of a picture. Needs Layout Builder.",
     "type": "library",
     "license": "proprietary",
     "require": {

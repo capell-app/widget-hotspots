@@ -23,7 +23,7 @@
             "path": "docs/assets/marketplace/extension-card.svg",
             "fixtureKind": "illustrative-catalogue",
             "notes": "Committed Beta Marketplace card artwork for Hotspots Widget.",
-            "useCase": "A buyer reviews the Beta extension card before enabling Hotspots Widget."
+            "useCase": "The Hotspots Widget extension card, marked Beta."
         },
         {
             "id": "hotspots-layout-builder-editor",

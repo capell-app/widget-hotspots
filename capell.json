@@ -6,7 +6,7 @@
     "kind": "package",
     "capellApiVersion": "^1.0",
     "version": "1.0.0",
-    "description": "Up to 30 ordered accessible image hotspots with numeric placement and optional secure lazy targets.",
+    "description": "Numbered points on one uploaded image that visitors tap to read a short label and detail about each part.",
     "product": {
         "group": "Capell Essentials",
         "tier": "free",
@@ -59,7 +59,7 @@
     },
     "settings": [],
     "permissions": [],
-    "capabilities": ["frontend.public-static", "frontend.interactive"],
+    "capabilities": ["frontend-surface"],
     "security": {
         "riskTier": "low",
         "publicSurface": {
@@ -142,41 +142,59 @@
         "privateDocsRequested": false
     },
     "marketplace": {
-        "summary": "Place accessible details and secure lazy targets over a local image.",
-        "description": "Mark up to thirty points on a product photo, venue plan or diagram. Each point opens its own accessible details panel and can link to another widget on the same page. Requires Layout Builder. Limits: the image must be uploaded to the Capell media library, and a link only works when its target widget is on the same rendered page.",
-        "problem": "Visitors looking at a detailed image may not know where to find an explanation.",
-        "outcome": "A page has labelled points that visitors can inspect on an image.",
+        "summary": "Explain a product photo, floor plan or diagram with up to thirty numbered points visitors can open.",
+        "description": "Upload a product photo or floor plan and add up to thirty numbered dots to it. Drag each dot into place on a preview, or nudge it with the arrow keys. Every dot has a short label and a few lines of plain text that open when a visitor taps it. A note can also link to another part of the same page, such as a size guide. Dots are sized for thumbs, take your theme's main colour and can be reached with the keyboard. The image must be uploaded to the Capell media library. It needs Layout Builder to place it on a page.",
+        "problem": "People look at a detailed picture and can't tell what each part is or why it matters.",
+        "outcome": "Visitors tap a numbered dot and read a short explanation of that exact spot.",
         "faq": [
             {
-                "question": "What can a hotspot reveal?",
-                "answer": "A point can expose supporting content or an approved lazy widget target."
+                "question": "What can a dot show?",
+                "answer": "A short label and a few lines of plain text. A dot can also link to other content you have put on the same page, such as a size guide, but not to a different page."
             },
             {
-                "question": "How many points can an image have?",
-                "answer": "An image can have up to 30 hotspots."
+                "question": "How many dots can one image have?",
+                "answer": "Up to thirty."
             },
             {
-                "question": "Are external images supported for hotspots?",
-                "answer": "No. Editors select a local image and provide alt text."
+                "question": "Can I use an image from another website?",
+                "answer": "No. The image has to be one you have uploaded to your site, and it needs a description for screen readers."
+            },
+            {
+                "question": "How do I place a dot exactly?",
+                "answer": "Drag it to the right spot on the image preview. For fine adjustments, move it with the arrow keys."
             }
         ],
         "screenshots": [
             {
                 "path": "docs/assets/marketplace/listing-hotspots-public-output.png",
-                "alt": "Hotspots public output",
-                "caption": "Hotspots public output"
+                "alt": "Photo of a glass-walled office corridor with two numbered round markers placed over it",
+                "caption": "Visitors see numbered dots on the photo and tap one to read about that spot."
             },
             {
                 "path": "docs/assets/marketplace/listing-hotspots-layout-builder-editor.png",
-                "alt": "Hotspots fields in Layout Builder",
-                "caption": "Hotspots fields in Layout Builder"
+                "alt": "Page editor with an Image hotspots block open, showing the photo, its alt text and the first hotspot's label and detail",
+                "caption": "The image, its description and each dot's label and detail are filled in here."
             },
             {
                 "path": "docs/assets/marketplace/extension-card.jpg",
-                "alt": "Hotspots widget preview",
-                "caption": "Hotspots widget"
+                "alt": "Marketplace card for Hotspots with three numbered dots over a mountain drawing and a line about keyboard-reachable detail",
+                "caption": "Card used for the widget's Marketplace listing."
             }
         ],
         "categories": ["foundation", "frontend", "interactive"]
+    },
+    "contributionTraceability": {
+        "contributions": [
+            {
+                "type": "asset",
+                "key": "resource-group:capell-app.widget-hotspots",
+                "providerBucket": "runtime"
+            },
+            {
+                "type": "content-widget",
+                "key": "capell-app.hotspots",
+                "providerBucket": "runtime"
+            }
+        ]
     }
 }
