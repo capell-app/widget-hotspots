@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 use Capell\Admin\Filament\Components\Forms\Editor\ContentBuilder;
 use Capell\Admin\Support\Media\AdminUploadOwnership;
+use Capell\Core\Data\Rendering\FrontendRuntimeManifestData;
+use Capell\Core\Enums\Rendering\RenderingStrategyEnum;
 use Capell\Core\Facades\CapellCore;
 use Capell\Frontend\Data\Assets\FrontendResourcePlanData;
-use Capell\Frontend\Data\FrontendRuntimeManifestData;
 use Capell\Frontend\Data\PublicPageRenderData;
-use Capell\Frontend\Enums\RenderingStrategyEnum;
 use Capell\WidgetHotspots\Data\HotspotsRenderData;
 use Capell\WidgetHotspots\Filament\HotspotsWidget;
 use Capell\WidgetHotspots\Providers\WidgetHotspotsServiceProvider;
@@ -84,11 +84,6 @@ it('renders only prepared public target links and safely omits missing target id
     $targetId = (string) Str::uuid();
     $renderData = HotspotsRenderData::from(['image' => 'plan.jpg', 'alt' => 'Plan', 'hotspots' => [['label' => 'Studio', 'detail' => 'Visit', 'x' => 20, 'y' => 30, 'targetInstanceId' => $targetId]]]);
     $pageData = new PublicPageRenderData(
-        page: null,
-        site: null,
-        language: null,
-        layout: null,
-        theme: null,
         layoutGraph: null,
         runtimeManifest: FrontendRuntimeManifestData::forRenderingStrategy(RenderingStrategyEnum::BladeOnly),
         resourcePlan: new FrontendResourcePlanData([], [], [], [], [], [], [], ''),
