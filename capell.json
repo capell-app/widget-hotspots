@@ -6,6 +6,7 @@
     "kind": "package",
     "capellApiVersion": "^1.0",
     "version": "1.0.0",
+    "launchStatus": "preview",
     "description": "Numbered points on one uploaded image that visitors tap to read a short label and detail about each part.",
     "product": {
         "group": "Capell Essentials",
